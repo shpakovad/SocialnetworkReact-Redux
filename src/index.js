@@ -12,13 +12,8 @@ import {Provider} from 'react-redux';
 
 
     ReactDOM.render(
-        <BrowserRouter>
-        <Provider store={store}> 
-            <App />
-            </Provider>
-            {/* addPost={store.addPost.bind(store)}  //т.к. не от имени store в данном случае вызывается этот метод, то мы забандили(привязяли) его к store(к владельцу этого метода)}
-            // updateNewPostText={store.updateNewPostText.bind(store)} />  {/*bind возвращает др ф-цию, где store всегда будет this*/}
-        </BrowserRouter>, document.getElementById('root'));
+
+            <App />, document.getElementById('root'));
 
 
 

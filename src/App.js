@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {Route, withRouter} from 'react-router-dom'   // экспортировали с библиотеки
+import {BrowserRouter, Route, withRouter} from 'react-router-dom'   // экспортировали с библиотеки
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from "./Components/Users/UsersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/preloader/preloader";
+import store from "./redux/redux-store";
 
 class App extends Component {
 
@@ -25,7 +26,9 @@ class App extends Component {
 
 
         return (
-            // <BrowserRouter>    {/* надо обрамлять тогда весь сайт, если вводим <Router> . Что бы при нажатии на ссылки не перезагружалась страничка, а просто как бы переход был. Он должен быть один единственный и обрамлять App*/}
+            <BrowserRouter>
+                <Provider store={store}>
+
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar/>
@@ -48,7 +51,8 @@ class App extends Component {
                     <Route path='/login' render={() => <Login/>}/>
                 </div>
             </div>
-            // </BrowserRouter> - переместили в index.js
+                </Provider>
+             </BrowserRouter>
         )
     }
 }
