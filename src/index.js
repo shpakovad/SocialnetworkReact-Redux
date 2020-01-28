@@ -12,8 +12,12 @@ import {Provider} from 'react-redux';
 
 
     ReactDOM.render(
-
-            <App />, document.getElementById('root'));
+        <BrowserRouter>
+            <Provider store={store}>
+            <App />
+            </Provider>
+        </BrowserRouter>
+            , document.getElementById('root'));
 
 
 

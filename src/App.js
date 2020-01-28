@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {BrowserRouter, Route, withRouter} from 'react-router-dom'   // экспортировали с библиотеки
+import {Route, withRouter} from 'react-router-dom';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from "./Components/Users/UsersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
-import {connect, Provider} from "react-redux";
+import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/preloader/preloader";
-import store from "./redux/redux-store";
+
 
 class App extends Component {
 
@@ -20,14 +20,11 @@ class App extends Component {
     }
 
     render() {
-        if(!this.props.initialized) {
-            return  <Preloader/>
+        if (!this.props.initialized) {
+            return <Preloader/>
         }
 
-
         return (
-            <BrowserRouter>
-                <Provider store={store}>
 
             <div className='app-wrapper'>
                 <HeaderContainer/>
@@ -51,22 +48,20 @@ class App extends Component {
                     <Route path='/login' render={() => <Login/>}/>
                 </div>
             </div>
-                </Provider>
-             </BrowserRouter>
+
         )
     }
 }
 
-const mapStateToProps=(state)=> {
+const mapStateToProps = (state) => {
     return {
-        initialized:state.app.initialized
+        initialized: state.app.initialized
     }
-}
+};
 
-export default compose (
+export default compose(
     withRouter,
-    connect(mapStateToProps, {initializeApp})) (App);
-
+    connect(mapStateToProps, {initializeApp}))(App);
 
 
 //все теги превращаются в dom-элементы, объекты. JSX-разметку удобнее писать ,чем document.createElement
@@ -89,7 +84,6 @@ export default compose (
 //bandle.js - это тот файл, куда склеиваются App.js, index.js
 //<Route /> - специальная компонента, отвечающая за то, что при клике переходим на др. страничку. Т.к. в этом проекте ссылочные будут только две менюшки (два маршрута) 
 // (Profile,Message), то вводим две компоненты такие
-
 
 
 // Index.js рендерит App

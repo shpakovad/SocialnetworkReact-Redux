@@ -1,6 +1,4 @@
 import profileReducer, {addPostActionCreator, deletePost} from "./profileReducer";
-import ReactDOM from "react-dom";
-import App from "../App";
 import React from "react";
 
 let state = {
@@ -16,19 +14,17 @@ let state = {
 it('length of posts should be incremented', () => {
     let action = addPostActionCreator('it-kamasutra');
 
-
     let newState = profileReducer(state, action);
     expect(newState.posts.length).toBe(5);
 
-})
+});
 
 it('massages of new post  should be correct', () => {
-        let action = addPostActionCreator('it-kamasutra');
+    let action = addPostActionCreator('it-kamasutra');
 
-        let newState = profileReducer(state, action);
+    let newState = profileReducer(state, action);
     expect(newState.posts[4].message).toBe('it-kamasutra')
-})
-
+});
 
 it('after deleting length of messages should be decrement', () => {
     let action = deletePost(1);
@@ -37,10 +33,8 @@ it('after deleting length of messages should be decrement', () => {
     expect(newState.posts.length).toBe(3)
 })
 
-
 it('after deleting length should not be decrement if id is incorrect', () => {
     let action = deletePost(1000);
-
     let newState = profileReducer(state, action);
     expect(newState.posts.length).toBe(4)
-})
+});
