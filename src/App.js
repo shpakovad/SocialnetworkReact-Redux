@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Route, withRouter} from 'react-router-dom';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from "./Components/Users/UsersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/preloader/preloader";
+import store from "./redux/redux-store";
 
 
 class App extends Component {
@@ -59,9 +60,19 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default compose(
+let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App);
+
+const SamuraiJSApp=(props)=>{
+    return   <BrowserRouter>
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>
+    </BrowserRouter>
+}
+
+export default SamuraiJSApp
 
 
 //все теги превращаются в dom-элементы, объекты. JSX-разметку удобнее писать ,чем document.createElement
