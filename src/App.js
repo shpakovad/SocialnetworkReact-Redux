@@ -26,7 +26,7 @@ class App extends Component {
         }
 
         return (
-
+<div className='app'>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar/>
@@ -49,7 +49,7 @@ class App extends Component {
                     <Route path='/login' render={() => <Login/>}/>
                 </div>
             </div>
-
+</div>
         )
     }
 }

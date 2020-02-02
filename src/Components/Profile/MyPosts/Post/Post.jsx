@@ -1,16 +1,17 @@
 import React from 'react';
 import s from './Post.module.css'
-
+import like from '../../../../assets/images/like.svg'
 const Post = (props) => {
     return (
 
         <div className={s.item}>
-            <img src='https://avatars.mds.yandex.net/get-pdb/812271/11fbe7bf-4689-4f95-839f-9451e3d26c0a/s375' alt =''/>
+            <img className={s.iconUser} src='https://avatars.mds.yandex.net/get-pdb/812271/11fbe7bf-4689-4f95-839f-9451e3d26c0a/s375' alt =''/>
+
           {props.message}
 
         <div>
-                <span>
-                    like {props.likesCount}
+                <span className={s.likeText}>
+                    <img className={s.like} src={like}/> {props.likesCount}
                      </span>
             </div>
         </div>
