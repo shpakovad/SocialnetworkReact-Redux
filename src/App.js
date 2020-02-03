@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import {BrowserRouter, Route, withRouter} from 'react-router-dom';
-import DialogsContainer from './Components/Dialogs/DialogsContainer';
+ //import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from "./Components/Users/UsersContainer";
-import ProfileContainer from "./Components/Profile/ProfileContainer";
+//import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -12,6 +12,14 @@ import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/preloader/preloader";
 import store from "./redux/redux-store";
+import withSuspense from "./HOC/withSuspense";
+
+const DialogsContainer = React.lazy(() => import('./Components/Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./Components/Profile/ProfileContainer'));
+
+
+
+
 
 
 class App extends Component {
@@ -41,10 +49,8 @@ class App extends Component {
                     {/* <Route path='/dialogs' render={() => <Dialogs dialogs={props.appState.dialogsPage.dialogs} messages={props.appState.dialogsPage.messages} />} />
                     <Route path='/profile' render={() => <Profile posts={props.appState.profilePage.posts} />} /> */}
 
-                    <Route path='/dialogs' render={() =>
-                        <DialogsContainer/>}/> {/*не писали последних свойств,т.к.они и так все упакованы в dialogsPage и profilePage  */}
-                    <Route path='/profile/:userId?' render={() =>
-                        <ProfileContainer/>}/> {/*userId-параметр,с?-т.е., этот пар-р может быть,может не быть. Его не будет, если мы в собственном профиле*/}
+                    <Route path='/dialogs' render={withSuspense(DialogsContainer)}/> {/*не писали последних свойств,т.к.они и так все упакованы в dialogsPage и profilePage  */}
+                    <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/> {/*userId-параметр,с?-т.е., этот пар-р может быть,может не быть. Его не будет, если мы в собственном профиле*/}
                     <Route path='/users' render={() => <UsersContainer/>}/>
                     <Route path='/login' render={() => <Login/>}/>
                 </div>

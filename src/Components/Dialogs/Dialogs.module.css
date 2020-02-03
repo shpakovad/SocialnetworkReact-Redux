@@ -1,9 +1,15 @@
 .dialogs { display: grid;
     grid-template-columns: 2fr 10fr;
+
 }
-.dialogsItems {
-padding: 10px;
-color: cyan;
+.dialogs {
+    text-decoration: none;
+    font-style: italic;
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 30px;
+    MARGIN-LEFT: 20px;
+    margin-top: 20px;
 }
 .dialogsItems .active {
    color: goldenrod;
@@ -13,4 +19,51 @@ color: cyan;
 }
 .messages .message {
 color:  black;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.userPhoto{
+    width: 40px;
+}
+.wrapperDialogs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.wrapperMessage{
+    width: 680px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    margin-top: 17px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.wrapperTextarea textarea{
+    margin: 0px;
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 25px;
+    opacity: 0.8;
+}
+.wrapperTextarea{
+    text-align: center;
+}
+.btnSendMessage{
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
+    background: #00ead5;
+    text-decoration: underline;
+    font-family: cursive;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.btnSendMessage:hover{
+    height: 50px;
+    width: 90px;
 }

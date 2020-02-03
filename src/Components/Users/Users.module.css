@@ -1,3 +1,26 @@
 .userPhoto {
     height: 150px;
 }
+.userWrapper {
+    margin: 50px;
+}
+.followingBtn{
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    background: #00ead5;
+    text-decoration: underline;
+    font-family: cursive;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+.userName {
+    color: #0ef2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: oblique;
+    padding-bottom: 10px;
+}
+.userLocation{
+    font-family: cursive;
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from "./Users.module.css";
-import userPhoto from '../../assets/images/userPhoto.png' ;
+import userPhoto from '../../assets/images/userPhoto.svg' ;
 import {NavLink} from "react-router-dom";
-
 
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
 
     return (
-        <div>
+        <div className={styles.userWrapper}>
  <span>
 <div>
     <NavLink to={'/profile/' + user.id}>
@@ -17,11 +16,11 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
     </div>
 <div>
 {user.followed
-    ? <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+    ? <button className={styles.followingBtn} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
         unfollow(user.id)
 
     }}> Unfollow </button>
-    : <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+    : <button className={styles.followingBtn} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
         follow(user.id)
 
     }}> Follow </button>}
@@ -29,12 +28,12 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
 </span>
             <span>
 <span>
-<div>  {user.name} </div>
+<div className={styles.userName}>  {user.name} </div>
 <div>  {user.status} </div>
 </span>
 <span>
-<div>  {"user.location.country"} </div>
-<div>  {"user.location.city"} </div>
+<div className={styles.userLocation}>  {"user.location.country"} </div>
+<div className={styles.userLocation}>  {"user.location.city"} </div>
 </span>
 </span>
         </div>)
