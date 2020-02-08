@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/SocialnetworkReact-Redux/static/css/main.116e3974.chunk.css",
+    "main.js": "/SocialnetworkReact-Redux/static/js/main.fe1a4c1e.chunk.js",
+    "main.js.map": "/SocialnetworkReact-Redux/static/js/main.fe1a4c1e.chunk.js.map",
+    "runtime~main.js": "/SocialnetworkReact-Redux/static/js/runtime~main.89429b19.js",
+    "runtime~main.js.map": "/SocialnetworkReact-Redux/static/js/runtime~main.89429b19.js.map",
+    "static/js/2.a5b7875a.chunk.js": "/SocialnetworkReact-Redux/static/js/2.a5b7875a.chunk.js",
+    "static/js/2.a5b7875a.chunk.js.map": "/SocialnetworkReact-Redux/static/js/2.a5b7875a.chunk.js.map",
+    "static/css/3.3336339d.chunk.css": "/SocialnetworkReact-Redux/static/css/3.3336339d.chunk.css",
+    "static/js/3.373d8c2c.chunk.js": "/SocialnetworkReact-Redux/static/js/3.373d8c2c.chunk.js",
+    "static/js/3.373d8c2c.chunk.js.map": "/SocialnetworkReact-Redux/static/js/3.373d8c2c.chunk.js.map",
+    "static/css/4.fd5f2de6.chunk.css": "/SocialnetworkReact-Redux/static/css/4.fd5f2de6.chunk.css",
+    "static/js/4.a90afe26.chunk.js": "/SocialnetworkReact-Redux/static/js/4.a90afe26.chunk.js",
+    "static/js/4.a90afe26.chunk.js.map": "/SocialnetworkReact-Redux/static/js/4.a90afe26.chunk.js.map",
+    "index.html": "/SocialnetworkReact-Redux/index.html",
+    "precache-manifest.6ab297118a9343ab58b17d1b06268268.js": "/SocialnetworkReact-Redux/precache-manifest.6ab297118a9343ab58b17d1b06268268.js",
+    "service-worker.js": "/SocialnetworkReact-Redux/service-worker.js",
+    "static/css/3.3336339d.chunk.css.map": "/SocialnetworkReact-Redux/static/css/3.3336339d.chunk.css.map",
+    "static/css/4.fd5f2de6.chunk.css.map": "/SocialnetworkReact-Redux/static/css/4.fd5f2de6.chunk.css.map",
+    "static/css/main.116e3974.chunk.css.map": "/SocialnetworkReact-Redux/static/css/main.116e3974.chunk.css.map",
+    "static/media/App.css": "/SocialnetworkReact-Redux/static/media/bg_image.2fa41931.jpg",
+    "static/media/cat.svg": "/SocialnetworkReact-Redux/static/media/cat.26bce32a.svg",
+    "static/media/like.svg": "/SocialnetworkReact-Redux/static/media/like.8d818e4e.svg",
+    "static/media/preloader.svg": "/SocialnetworkReact-Redux/static/media/preloader.5a2a7610.svg",
+    "static/media/userPhoto.svg": "/SocialnetworkReact-Redux/static/media/userPhoto.9306807e.svg",
+    "static/media/userPhotoDialogs.svg": "/SocialnetworkReact-Redux/static/media/userPhotoDialogs.a8bb2c7f.svg"
+  }
+}
