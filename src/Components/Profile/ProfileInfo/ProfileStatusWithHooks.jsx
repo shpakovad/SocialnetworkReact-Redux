@@ -29,7 +29,8 @@ const activatedEditMode =()=> {
 
                 {!editMode &&
                 <div className={s.wrapperStatus}>
-                    <span className={s.status} onDoubleClick={activatedEditMode}> {props.status || '---------' }  </span>
+
+                    <b> status: </b>   <span className={s.status} onDoubleClick={activatedEditMode}> {props.status || '---------' }  </span>
                 </div>
                 }
                 {editMode &&

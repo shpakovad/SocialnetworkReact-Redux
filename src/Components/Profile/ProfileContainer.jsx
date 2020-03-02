@@ -1,10 +1,8 @@
 import React from 'react';
 import Profile from "./Profile";
-import  axios from "axios";
-import {getStatus, getUsersProfile, savePhoto, setUserProfile, updateStatus} from "../../redux/profileReducer";
+import {getStatus, getUsersProfile, savePhoto, saveProfile, updateStatus} from "../../redux/profileReducer";
 import {connect} from "react-redux";
-import {Redirect, withRouter} from "react-router-dom";
-import {usersAPI} from "../../api/api";
+import { withRouter} from "react-router-dom";
 import {compose} from 'redux';
 
 
@@ -72,7 +70,7 @@ let mapStateToProps =(state) => ({
 // let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
 
 export default compose (
-    connect(mapStateToProps,{getUsersProfile,getStatus,updateStatus, savePhoto}),
+    connect(mapStateToProps,{getUsersProfile,getStatus,updateStatus, savePhoto,saveProfile}),
     withRouter
     // withAuthRedirect
 )(ProfileContainer)

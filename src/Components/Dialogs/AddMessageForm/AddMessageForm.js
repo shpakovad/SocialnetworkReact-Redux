@@ -20,6 +20,6 @@ const AddMessageForm = (props) => {
             </div>
         </form>
     )
-}
+};
 
 export default reduxForm({form: 'AddMessageForm'})(AddMessageForm)
