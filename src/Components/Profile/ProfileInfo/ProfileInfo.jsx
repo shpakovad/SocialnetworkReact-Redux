@@ -5,9 +5,9 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from '../../../assets/images/userPhoto.svg'
 import ProfileDataForm from "./ProfileDataForm";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner,savePhoto, saveProfile}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
 
-    let [editMode,setEditMode]=useState(false);
+    let [editMode, setEditMode] = useState(false);
 
 
     // useEffect(()=>{
@@ -19,29 +19,31 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner,savePhoto, saveProf
         return <Preloader/>
     }
 
-    const onMainPhotoSelected =(e) =>{
+    const onMainPhotoSelected = (e) => {
         if (e.target.files.length) {
-           savePhoto(e.target.files[0])
+            savePhoto(e.target.files[0])
         }
     };
-    const onSubmit =  (formData) => {
- saveProfile(formData)
-     .then (()=>{
-         setEditMode(false)
- })
+    const onSubmit = (formData) => {
+        saveProfile(formData)
+            .then(() => {
+                setEditMode(false)
+            })
     };
 
     return (
         <div>
             <div className={s.descriptionBlock}>
                 <img className={s.mainPhoto} src={profile.photos.large || userPhoto}/>
-                {isOwner && <input type={'file'} onChange={onMainPhotoSelected}/>}
+                {isOwner && <input className={s.fileInput} type={'file'} onChange={onMainPhotoSelected}/>}
 
-                {editMode ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit} /> :
+                {editMode ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/> :
                     <ProfileData
                         profile={profile}
-                                 isOwner={isOwner}
-                                 goToEditMode={()=>{setEditMode(true)}}/> }
+                        isOwner={isOwner}
+                        goToEditMode={() => {
+                            setEditMode(true)
+                        }}/>}
 
                 <ProfileStatusWithHooks status={status}
                                         updateStatus={updateStatus}/>
@@ -50,28 +52,27 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner,savePhoto, saveProf
     )
 }
 
-const ProfileData= ({profile,isOwner,goToEditMode}) =>{
-   return <div className={s.selfData}>
-    { isOwner &&  <div> <button onClick={goToEditMode}> Edit </button> </div>}
-        <div> <b> Full name </b>: {profile.fullName} </div>
-        <div> <b> Looking for a job </b>: {profile.lookingForAJob ? 'yes' : 'no'}
+const ProfileData = ({profile, isOwner, goToEditMode}) => {
+    return <div className={s.selfData}>
+        {isOwner && <div>
+            <button className={s.editBtn} onClick={goToEditMode}> Edit</button>
+        </div>}
+        <div><b> Full name </b>: {profile.fullName} </div>
+        <div><b> Looking for a job </b>: {profile.lookingForAJob ? 'yes' : 'no'}
             {profile.lookingForAJob &&
-            <div> <b> My professionals skills </b>: {profile.lookingForAJobDescription} </div>
+            <div><b> My professionals skills </b>: {profile.lookingForAJobDescription} </div>
             }
         </div>
-        <div> <b> Contacts </b>: {Object.keys(profile.contacts).map(key=>{
-            return   <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]} />
+        <div><b> Contacts </b>: {Object.keys(profile.contacts).map(key => {
+            return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
         })} </div>
-        <div> <b> About me </b>: {profile.aboutMe} </div>
+        <div><b> About me </b>: {profile.aboutMe} </div>
     </div>
 };
 
-const Contact =({contactTitle,contactValue})=> {
-    return <div className={s.contact}> <b>{contactTitle}</b>:{contactValue}</div>
+const Contact = ({contactTitle, contactValue}) => {
+    return <div className={s.contact}><b>{contactTitle}</b>:{contactValue}</div>
 };
-
-
-
 
 
 export default ProfileInfo;

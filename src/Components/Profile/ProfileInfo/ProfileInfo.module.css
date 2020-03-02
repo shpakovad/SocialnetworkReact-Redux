@@ -1,14 +1,18 @@
 .descriptionBlock {
-padding: 10px;
+    padding: 10px;
     position: relative;
 }
-.descriptionBlock img{
+
+.descriptionBlock img {
     box-shadow: 20px 20px rgb(0, 0, 0, 0.58);
 }
-.status{
-    /*position: absolute;*/
+
+.status {
+    padding-left: 10px;
+    line-height: 50px;
 }
-.wrapperStatus{
+
+.wrapperStatus {
     background-color: #3b4351;
     margin-top: 40px;
     display: flex;
@@ -21,12 +25,34 @@ padding: 10px;
     width: 323px;
 
 }
-.mainPhoto{
+
+.mainPhoto {
     height: 180px;
 }
-.contact{
+
+.contact {
     padding-left: 10px;
 }
+
 .selfData {
     padding-top: 30px;
+    color: white;
+}
+
+.editBtn {
+    background: #00ead5;
+    text-decoration: underline;
+    font-family: cursive;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 70px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.fileInput {
+    position: absolute;
+    top: 220px;
+    left: 20px;
 }
