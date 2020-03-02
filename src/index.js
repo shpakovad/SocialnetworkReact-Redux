@@ -10,17 +10,11 @@ import { BrowserRouter} from 'react-router-dom';  // экспортировал�
 import store  from './redux/redux-store';
 import {Provider} from 'react-redux';
 
-
-
     ReactDOM.render(
 
         <SamuraiJSApp />
 
             , document.getElementById('root'));
-
-
-
-
 
 
 // rerenderEntireTree  (state);
