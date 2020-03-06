@@ -40,6 +40,8 @@ a {
     margin-top: 17px;
     border-radius: 10px;
     padding-left: 15px;
+    text-align: center;
+    line-height: 50px;
 }
 .wrapperTextarea textarea{
     margin: 0px;

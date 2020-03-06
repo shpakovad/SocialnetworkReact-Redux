@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className={`${s.item} ${s.active}`}>  <NavLink  to ='/profile' activeClassName={s.activeLink}> Profile </NavLink> </div>   {/*вместо <a> ввели спец компоненту <NavLink>, которую тоже экспортировали,что бы страничка как бы не перезагружалась, а менялся только окончательный адрес  */}
             <div className={`${s.item} ${s.active}`}> <NavLink to='/dialogs' activeClassName={s.activeLink}> Messages </NavLink> </div>
             <div className={`${s.item} ${s.active}`}> <NavLink to ='/users' activeClassName={s.activeLink}> Users </NavLink> </div>
-            <div className={`${s.item} ${s.active}`}>  <NavLink to ='/profile' > News </NavLink> </div>
+            <div className={`${s.item} ${s.active}`}>  <NavLink to ='/profile'  > News </NavLink> </div>
             <div className={`${s.item} ${s.active}`}>  <NavLink to ='/profile' > Music </NavLink> </div>
             <div className={`${s.item} ${s.active}`}>  <NavLink to ='/profile' > Settings </NavLink> </div>
         </nav>

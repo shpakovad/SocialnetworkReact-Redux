@@ -1,3 +1,6 @@
+body {
+
+}
 .app-wrapper {
     display: grid;
     grid-template-columns: 2fr 10fr;
@@ -20,7 +23,6 @@
     width: 1100px;
     margin: 0 auto;
     background-size: cover;
-    height:100%;
 }
 
 

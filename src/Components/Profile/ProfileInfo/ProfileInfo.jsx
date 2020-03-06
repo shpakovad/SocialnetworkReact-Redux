@@ -57,6 +57,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
         {isOwner && <div>
             <button className={s.editBtn} onClick={goToEditMode}> Edit</button>
         </div>}
+        <div>
         <div><b> Full name </b>: {profile.fullName} </div>
         <div><b> Looking for a job </b>: {profile.lookingForAJob ? 'yes' : 'no'}
             {profile.lookingForAJob &&
@@ -67,6 +68,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
         })} </div>
         <div><b> About me </b>: {profile.aboutMe} </div>
+        </div>
     </div>
 };
 

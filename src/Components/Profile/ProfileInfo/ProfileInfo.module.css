@@ -10,6 +10,7 @@
 .status {
     padding-left: 10px;
     line-height: 50px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .wrapperStatus {
@@ -36,8 +37,11 @@
 
 .selfData {
     padding-top: 30px;
-    color: white;
+    color: antiquewhite;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
 }
+
 
 .editBtn {
     background: #00ead5;
