@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import {BrowserRouter, Route, withRouter} from 'react-router-dom';
- //import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from "./Components/Users/UsersContainer";
-//import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -13,6 +11,7 @@ import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/preloader/preloader";
 import store from "./redux/redux-store";
 import withSuspense from "./HOC/withSuspense";
+
 
 const DialogsContainer = React.lazy(() => import('./Components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./Components/Profile/ProfileContainer'));
@@ -37,6 +36,7 @@ class App extends Component {
 <div className='app'>
             <div className='app-wrapper'>
                 <HeaderContainer/>
+
                 <Navbar/>
                 <div
                     className='app-wrapper-content'>                {/*  Это общий стиль для всех страничек(серединка. Профайл и Диалоги). Этот стиль будет в App.css */}

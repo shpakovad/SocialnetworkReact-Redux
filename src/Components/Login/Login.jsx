@@ -13,18 +13,7 @@ import s from './Login.module.css'
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
-            {/*<div>*/}
-            {/*    <Field placeholder={'Email'} name={'email'}*/}
-            {/*           component={Input}*/}
-            {/*           validate={[required]}/>*/}
-            {/*</div>*/}
-            {/*<div>*/}
-            {/*    <Field placeholder={'Password'} name={'password'} component={Input}*/}
-            {/*           validate={[required]} type={'password'}/>*/}
-            {/*</div>*/}
-            {/*<div className={s.rememberMe}>*/}
-            {/*    <Field type={'checkbox'} name={'rememberMe'} component={Input}/> remember me*/}
-            {/*</div>*/}
+
             {createField('Email','email',[required], Input)}
             {createField('Password','password',[required], Input, {type:'password'})}
           <div className={s.rememberMe}>
@@ -37,7 +26,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                 {error}
             </div>}
             <div>
-                <button>Login</button>
+                <button className={s.loginButtonRegistration}>Login</button>
             </div>
         </form>
     )

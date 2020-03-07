@@ -15,6 +15,14 @@
     padding: 5px;
     color: white;
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
+}
+.saveBtn {
+    margin-top: 6%;
+    margin-bottom: 2%;
+    color: white;
+    background: #49494c;
+    width: 100px;
+    height: 30px;
 }
