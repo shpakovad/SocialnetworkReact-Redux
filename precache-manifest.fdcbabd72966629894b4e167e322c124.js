@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fb8fc77fff77120ead5cbf7ac9d9db3",
+    "revision": "c0407c5241ec2628e8394ed755bf0ff2",
     "url": "/SocialnetworkReact-Redux/index.html"
   },
   {
-    "revision": "b99992be24fe1a2d0024",
-    "url": "/SocialnetworkReact-Redux/static/css/3.47cc81a3.chunk.css"
+    "revision": "4c6545ea8978741e6c56",
+    "url": "/SocialnetworkReact-Redux/static/css/3.43550587.chunk.css"
   },
   {
-    "revision": "517224e486c09cae416f",
-    "url": "/SocialnetworkReact-Redux/static/css/4.fd5f2de6.chunk.css"
+    "revision": "0f18049bdbba209e960f",
+    "url": "/SocialnetworkReact-Redux/static/css/4.00a82999.chunk.css"
   },
   {
-    "revision": "8ae4bfdf612b90ad2c84",
-    "url": "/SocialnetworkReact-Redux/static/css/main.3f786042.chunk.css"
+    "revision": "0abf3439d8a4319dd71e",
+    "url": "/SocialnetworkReact-Redux/static/css/main.e2bf1a95.chunk.css"
   },
   {
-    "revision": "c9a99d6d56258eb7cb95",
-    "url": "/SocialnetworkReact-Redux/static/js/2.803c24b2.chunk.js"
+    "revision": "77af1234d9d323c6b973",
+    "url": "/SocialnetworkReact-Redux/static/js/2.db5f5cae.chunk.js"
   },
   {
-    "revision": "b99992be24fe1a2d0024",
-    "url": "/SocialnetworkReact-Redux/static/js/3.c818fa92.chunk.js"
+    "revision": "4c6545ea8978741e6c56",
+    "url": "/SocialnetworkReact-Redux/static/js/3.88269e4a.chunk.js"
   },
   {
-    "revision": "517224e486c09cae416f",
-    "url": "/SocialnetworkReact-Redux/static/js/4.9c4132a1.chunk.js"
+    "revision": "0f18049bdbba209e960f",
+    "url": "/SocialnetworkReact-Redux/static/js/4.76465583.chunk.js"
   },
   {
-    "revision": "8ae4bfdf612b90ad2c84",
-    "url": "/SocialnetworkReact-Redux/static/js/main.0848b3e5.chunk.js"
+    "revision": "0abf3439d8a4319dd71e",
+    "url": "/SocialnetworkReact-Redux/static/js/main.e7eda44d.chunk.js"
   },
   {
-    "revision": "53d7dbca22ebf9889c1a",
-    "url": "/SocialnetworkReact-Redux/static/js/runtime~main.f6b14657.js"
+    "revision": "2fecc232619fd7a920de",
+    "url": "/SocialnetworkReact-Redux/static/js/runtime~main.7cade2a2.js"
   },
   {
     "revision": "2fa419313e38ff018e4585d92f93854f",
