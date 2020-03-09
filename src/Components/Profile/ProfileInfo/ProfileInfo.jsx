@@ -9,12 +9,6 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
 
     let [editMode, setEditMode] = useState(false);
 
-
-    // useEffect(()=>{
-    //     setStatus(props.status)
-    // },[props.status])
-
-
     if (!profile) {
         return <Preloader/>
     }
@@ -35,7 +29,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
         <div>
             <div className={s.descriptionBlock}>
                 <img className={s.mainPhoto} src={profile.photos.large || userPhoto}/>
-                {isOwner && <input  className={s.fileInput} type={'file'} onChange={onMainPhotoSelected}/>}
+                {isOwner && <input className={s.fileInput} type={'file'} onChange={onMainPhotoSelected}/>}
 
                 {editMode ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/> :
                     <ProfileData
@@ -58,16 +52,16 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             <button className={s.editBtn} onClick={goToEditMode}> Edit</button>
         </div>}
         <div className={s.wrapperInfoDescription}>
-        <div><b> Full name </b>: {profile.fullName} </div>
-        <div><b> Looking for a job </b>: {profile.lookingForAJob ? 'yes' : 'no'}
-            {profile.lookingForAJob &&
-            <div><b> My professionals skills </b>:  {profile.lookingForAJobDescription} </div>
-            }
-        </div>
-        <div><b> Contacts </b>: {Object.keys(profile.contacts).map(key => {
-            return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
-        })} </div>
-        <div><b> About me </b>: {profile.aboutMe} </div>
+            <div><b> Full name </b>: {profile.fullName} </div>
+            <div><b> Looking for a job </b>: {profile.lookingForAJob ? 'yes' : 'no'}
+                {profile.lookingForAJob &&
+                <div><b> My professionals skills </b>: {profile.lookingForAJobDescription} </div>
+                }
+            </div>
+            <div><b> Contacts </b>: {Object.keys(profile.contacts).map(key => {
+                return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
+            })} </div>
+            <div><b> About me </b>: {profile.aboutMe} </div>
         </div>
     </div>
 

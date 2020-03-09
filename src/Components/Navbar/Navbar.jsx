@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className={`${s.item} ${s.active}`}>  <NavLink to ='/profile' > Settings </NavLink> </div>
         </nav>
     )
-}
+};
 export default Navbar;
 
 

@@ -1,20 +1,22 @@
 .login {
-    color:white;
+    color: white;
     padding-top: 15px;
     padding-left: 50px;
 }
+
 .rememberMe {
-    color:white;
+    color: white;
     padding-bottom: 15px;
 }
+
 .loginButtonRegistration {
-    margin-bottom: 40px;
     color: white;
     background: #49494c;
     width: 100px;
     height: 30px;
     margin-bottom: 500px;
 }
+
 form {
     padding-left: 50px;
 }

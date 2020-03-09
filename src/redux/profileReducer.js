@@ -14,7 +14,6 @@ let initialState = {
         {id: 3, message: 'Do you have a cat?', likesCount: 0},
         {id: 4, message: 'Hello!', likesCount: 5}
     ],
-    // newPostText: 'it-kamasutra',
     profile: null,
     status: ''
 };
@@ -103,7 +102,6 @@ export const saveProfile = (profile) => async (dispatch,getState) => {
          dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0] }))
         console.log(response.data)
         return Promise.reject(response.data.messages[0])
-       // dispatch(stopSubmit('edit-profile', {"contacts" :{"facebook": response.data.messages[0]} }))
     }
 };
 

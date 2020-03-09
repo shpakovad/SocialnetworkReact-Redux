@@ -1,6 +1,6 @@
 import React from 'react';
-import {Field, reduxForm} from "redux-form";
-import {createField, Input, Textarea} from "../../common/FormsControls/FormControls";
+import {reduxForm} from "redux-form";
+import {createField, Input} from "../../common/FormsControls/FormControls";
 import {required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
@@ -9,18 +9,17 @@ import style from '../../common/FormsControls/FormControls.module.css';
 import s from './Login.module.css'
 
 
-// const LoginForm = (props) => { внизу деструктуризация параметров
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
 
-            {createField('Email','email',[required], Input)}
-            {createField('Password','password',[required], Input, {type:'password'})}
-          <div className={s.rememberMe}>
-            {createField(null,'rememberMe',[], Input, {type:'checkbox'}, 'remember me')}
-          </div>
-            {captchaUrl && <img src={captchaUrl} />  }
-            {captchaUrl &&  createField('Symbols from image','captcha',[required], Input, {})  }
+            {createField('Email', 'email', [required], Input)}
+            {createField('Password', 'password', [required], Input, {type: 'password'})}
+            <div className={s.rememberMe}>
+                {createField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}
+            </div>
+            {captchaUrl && <img src={captchaUrl}/>}
+            {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {})}
 
             {error && <div className={style.formSummaryError}>
                 {error}
@@ -51,7 +50,7 @@ const Login = (props) => {
 const mapStateToProps = (state) => {
     return {
         isAuth: state.auth.isAuth,
-        captchaUrl:state.auth.captchaUrl
+        captchaUrl: state.auth.captchaUrl
     }
 };
 
