@@ -39,5 +39,10 @@
 .postsBlock button:hover {
     height: 60px;
     width: 100px;
+}
+.wrapperAddBtn {
     box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
 }

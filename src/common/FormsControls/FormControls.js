@@ -15,6 +15,14 @@ const FormControl=({input,meta,child, ...props})=> {
     )
 };
 
+// const warn = values => {
+//     const warnings = {}
+//     if (values.age < 19) {
+//         warnings.age = 'Hmm, you seem a bit young...'
+//     }
+//     return warnings
+// }
+
 
 export const Textarea = (props) => {
     const {input,meta,child, ...restProps}=props;

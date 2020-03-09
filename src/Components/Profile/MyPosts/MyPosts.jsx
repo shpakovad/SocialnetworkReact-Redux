@@ -47,7 +47,7 @@ const AddNewPostForm = (props) => {
                        name='newPostText'
                        validate={[required, maxLength10]}/>
             </div>
-            <div>
+            <div className={s.wrapperAddBtn}>
                 <button>Add post</button>
             </div>
         </form>

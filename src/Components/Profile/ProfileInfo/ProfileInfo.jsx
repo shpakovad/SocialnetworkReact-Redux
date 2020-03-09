@@ -50,7 +50,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
             </div>
         </div>
     )
-}
+};
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
     return <div className={s.selfData}>

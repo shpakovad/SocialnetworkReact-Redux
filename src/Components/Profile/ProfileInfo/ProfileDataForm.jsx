@@ -3,10 +3,13 @@ import s from "./ProfileInfo.module.css";
 import {createField, Input, Textarea} from "../../../common/FormsControls/FormControls";
 import {reduxForm} from "redux-form";
 import style from "../../../common/FormsControls/FormControls.module.css";
+import {maxLengthCreator} from "../../../utils/validators/validators";
 
 
-
+const maxLength40 = maxLengthCreator(40);
+const maxLength50 = maxLengthCreator(50);
 const ProfileDataForm= ({handleSubmit,profile,error}) =>{
+
     return <form className={s.selfData} onSubmit={handleSubmit}>
         <div> <button className={style.saveBtn}> Save </button> </div>
 
@@ -21,10 +24,14 @@ const ProfileDataForm= ({handleSubmit,profile,error}) =>{
 
 
             <div> <b> My professionals skills </b>:
-        {createField('My professionals skills','lookingForAJobDescription',[], Textarea)} </div>
+
+        {createField('My professionals skills','lookingForAJobDescription',[maxLength50], Textarea)}
+            </div>
 
         <div> <b> About me </b>:
-            {createField('About me','aboutMe',[], Textarea)} </div>
+            {createField('About me','aboutMe', [maxLength40], Textarea)}
+
+        </div>
 
         <div> <b> Contacts </b>: {Object.keys(profile.contacts).map(key=>{
             return   <div key={key} className={s.contact}>

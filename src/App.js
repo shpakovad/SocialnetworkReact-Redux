@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import UsersContainer from "./Components/Users/UsersContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
@@ -22,10 +22,20 @@ const ProfileContainer = React.lazy(() => import('./Components/Profile/ProfileCo
 
 
 class App extends Component {
+//тк в арр редюсер обрабатываем ошибку
+    // catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    //     alert ('error')
+    //     console.error (promiseRejectionEvent)
+    // };
 
     componentDidMount() {
-        this.props.initializeApp()
+        this.props.initializeApp();
+       // window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors)
     }
+
+    // componentWillMount() {
+    //     window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors)
+    // }
 
     render() {
         if (!this.props.initialized) {
@@ -48,11 +58,14 @@ class App extends Component {
                     {/* поэтому сделаи так,что бы были компоненты. Это две идентичных записи */}
                     {/* <Route path='/dialogs' render={() => <Dialogs dialogs={props.appState.dialogsPage.dialogs} messages={props.appState.dialogsPage.messages} />} />
                     <Route path='/profile' render={() => <Profile posts={props.appState.profilePage.posts} />} /> */}
-
+<Switch>
+                    <Route exact path='/' render={()=> <Redirect to ={"/profile"}/>}/> {/*не писали последних свойств,т.к.они и так все упакованы в dialogsPage и profilePage  */}
                     <Route path='/dialogs' render={withSuspense(DialogsContainer)}/> {/*не писали последних свойств,т.к.они и так все упакованы в dialogsPage и profilePage  */}
                     <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/> {/*userId-параметр,с?-т.е., этот пар-р может быть,может не быть. Его не будет, если мы в собственном профиле*/}
                     <Route path='/users' render={() => <UsersContainer/>}/>
                     <Route path='/login' render={() => <Login/>}/>
+                    <Route path='*' render={() => <div>Page Not Found</div>}/>
+</Switch>
                 </div>
             </div>
 </div>
