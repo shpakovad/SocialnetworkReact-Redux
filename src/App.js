@@ -41,7 +41,6 @@ class App extends Component {
                             <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
                             <Route path='/users' render={() => <UsersContainer/>}/>
                             <Route path='/login' render={() => <Login/>}/>
-                            <Route path='*' render={() => <div>Page Not Found</div>}/>
                         </Switch>
                     </div>
                 </div>
