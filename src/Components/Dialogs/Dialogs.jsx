@@ -6,7 +6,6 @@ import {Redirect} from "react-router-dom";
 import AddMessageForm from "./AddMessageForm/AddMessageForm";
 
 
-
 const Dialogs = (props) => {
     let state = props.dialogsPage;
     let dialogsElements = state.dialogs.map((item) => {
@@ -15,7 +14,6 @@ const Dialogs = (props) => {
     let messagesElements = state.messages.map((item) => {
         return <Message key={item.id} message={item.message}/>
     });
-    let newMessageBody = state.newMessageBody;
 
     let addMessage = (values) => {
         props.sendMessage(values.newMessageBody);
@@ -37,7 +35,7 @@ const Dialogs = (props) => {
             </div>
         </div>
     )
-}
+};
 
 
 export default Dialogs;

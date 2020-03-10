@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Dialogs from './Dialogs';
 import {connect} from 'react-redux';
 import withAuthRedirect from '../../HOC/withAuthRedirect';

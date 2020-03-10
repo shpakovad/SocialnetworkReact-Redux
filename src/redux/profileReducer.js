@@ -47,7 +47,7 @@ const profileReducer = (state = initialState, action) => {
         case DELETE_POST: {
             return {
                 ...state,
-                posts: state.posts.filter(p => p.id != action.postId)
+                posts: state.posts.filter(p => p.id !== action.postId)
             }
         }
         case SAVE_PHOTO_SUCCESS: {
@@ -100,7 +100,7 @@ export const saveProfile = (profile) => async (dispatch,getState) => {
          dispatch(getUsersProfile(userId));
     } else {
          dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0] }))
-        console.log(response.data)
+        console.log(response.data);
         return Promise.reject(response.data.messages[0])
     }
 };

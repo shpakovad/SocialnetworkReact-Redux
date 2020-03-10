@@ -11,7 +11,7 @@ const Profile = (props) => {
                          isOwner={props.isOwner} profile={props.profile} status={props.status}
                          updateStatus={props.updateStatus}
                          saveProfile={props.saveProfile}/>
-            <MyPostsContainer/> {/*у нас state уже содержит {props.appState.profilePage} , т.е. state={props.appState.profilePage} */}
+            <MyPostsContainer/>
         </div>
     )
 };

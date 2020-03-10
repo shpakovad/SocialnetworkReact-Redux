@@ -14,27 +14,27 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
         <div>
 
 
-            <div className={s.wrapperTestsData}> <span> Please, enter  </span>
-                 <span> test email : free@samuraijs.com </span>
-                  <span> test login : free </span>
-                    </div>
-
-        <form onSubmit={handleSubmit}>
-            {createField('Email', 'email', [required], Input)}
-            {createField('Password', 'password', [required], Input, {type: 'password'})}
-            <div className={s.rememberMe}>
-                {createField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}
+            <div className={s.wrapperTestsData}><span> Please, enter  </span>
+                <span> test email : free@samuraijs.com </span>
+                <span> test login : free </span>
             </div>
-            {captchaUrl && <img src={captchaUrl}/>}
-            {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {})}
 
-            {error && <div className={style.formSummaryError}>
-                {error}
-            </div>}
-            <div>
-                <button className={s.loginButtonRegistration}>Login</button>
-            </div>
-        </form>
+            <form onSubmit={handleSubmit}>
+                {createField('Email', 'email', [required], Input)}
+                {createField('Password', 'password', [required], Input, {type: 'password'})}
+                <div className={s.rememberMe}>
+                    {createField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}
+                </div>
+                {captchaUrl && <img alt="" src={captchaUrl}/>}
+                {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {})}
+
+                {error && <div className={style.formSummaryError}>
+                    {error}
+                </div>}
+                <div>
+                    <button className={s.loginButtonRegistration}>Login</button>
+                </div>
+            </form>
 
         </div>
     )

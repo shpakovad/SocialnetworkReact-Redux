@@ -1,21 +1,26 @@
 .selectedPage {
-    font-weight:bold ;
+    font-weight: bold;
 }
-.paginator{
+
+.paginator {
     margin: 10px;
     text-align: center;
 }
-.pageNumber{
+
+.pageNumber {
     padding: 9px;
     color: white;
     font-weight: bold;
     font-size: 18px;
+    text-decoration: none;
 }
-.pageNumber.selectedPage{
+
+.pageNumber.selectedPage {
     font-weight: bold;
     border-color: red;
 }
-.btnPaginator{
+
+.btnPaginator {
     border-radius: 10px;
     height: 30px;
     width: 80px;

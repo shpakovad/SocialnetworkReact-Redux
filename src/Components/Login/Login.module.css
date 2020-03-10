@@ -20,12 +20,13 @@
 form {
     padding-left: 50px;
 }
+
 .wrapperTestsData {
     display: flex;
     flex-direction: column;
     position: absolute;
     left: 50%;
-    color:white;
+    color: white;
     font-weight: bold;
     font-size: 20px;
 }

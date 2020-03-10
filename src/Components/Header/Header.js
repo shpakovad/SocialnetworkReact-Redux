@@ -6,7 +6,7 @@ import cat from '../../assets/images/cat.svg'
 const Header = (props) => {
     return (
         <header className={s.header}>
-            <img src={cat}/>
+            <img alt="" src={cat}/>
             <div className={s.loginBlock}>
                 {props.isAuth ?
                     <div> {props.login}

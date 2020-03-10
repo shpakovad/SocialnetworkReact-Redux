@@ -1,7 +1,9 @@
-.dialogs { display: grid;
+.dialogs {
+    display: grid;
     grid-template-columns: 2fr 10fr;
 
 }
+
 .dialogs {
     text-decoration: none;
     font-style: italic;
@@ -11,28 +13,35 @@
     MARGIN-LEFT: 20px;
     margin-top: 20px;
 }
+
 .dialogsItems .active {
-   color: goldenrod;
-    }
+    color: goldenrod;
+}
+
 .messages {
     padding: 10px;
 }
+
 .messages .message {
-color:  black;
+    color: black;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
-.userPhoto{
+
+.userPhoto {
     width: 40px;
 }
-.wrapperDialogs{
+
+.wrapperDialogs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.wrapperMessage{
+
+.wrapperMessage {
     width: 680px;
     height: 50px;
     background: rgba(255, 255, 255, 0.8);
@@ -43,7 +52,8 @@ a {
     text-align: center;
     line-height: 50px;
 }
-.wrapperTextarea textarea{
+
+.wrapperTextarea textarea {
     margin: 0px;
     width: 70%;
     height: 50px;
@@ -52,10 +62,12 @@ a {
     opacity: 0.8;
     padding: 10px;
 }
-.wrapperTextarea{
+
+.wrapperTextarea {
     text-align: center;
 }
-.btnSendMessage{
+
+.btnSendMessage {
     border-radius: 10px;
     height: 40px;
     width: 80px;
@@ -66,10 +78,12 @@ a {
     margin-top: 30px;
     margin-bottom: 60px;
 }
-.btnSendMessage:hover{
+
+.btnSendMessage:hover {
     height: 50px;
     width: 90px;
 }
+
 .wrapperSendBtn {
     box-sizing: border-box;
     width: 100px;

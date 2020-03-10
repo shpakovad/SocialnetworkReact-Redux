@@ -4,12 +4,14 @@
     padding: 40px;
     opacity: 0.7;
 }
-.item a{
+
+.item a {
     color: white;
     text-decoration: none;
 }
+
 .item a.activeLink {
     color: #00ffdc;
     font-weight: bold;
-    
+
 }

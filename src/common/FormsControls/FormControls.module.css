@@ -1,7 +1,6 @@
 
 .formControl.error input,
-.formControl.error textarea
-{
+.formControl.error textarea {
     border: solid red 2px;
 }
 
@@ -10,11 +9,11 @@
     margin-bottom: 10px;
 }
 
-.formControl.error span
-{
+.formControl.error span {
     color: red;
     font-weight: bold;
 }
+
 .formSummaryError {
     padding: 5px;
     color: red;
@@ -22,6 +21,7 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
 .saveBtn {
     margin-top: 6%;
     margin-bottom: 2%;

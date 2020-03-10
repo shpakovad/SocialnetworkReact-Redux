@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import styles from './Paginator.module.css'
-import cn from 'classnames'
+import styles from './Paginator.module.css';
+import cn from 'classnames';
+import {NavLink} from "react-router-dom";
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 5}) => {
     let pagesCount = Math.ceil(totalItemsCount / pageSize);
@@ -19,13 +20,13 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
         <button className={styles.btnPaginator} onClick={() => (setPortionNumber(portionNumber - 1))}>Prev</button>}
         {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPagesNumber)
             .map(p => {
-                return <span className={cn({
+                return <NavLink to="/users" className={cn({
                     [styles.selectedPage]: currentPage === p
                 }, styles.pageNumber)}
-                             key={p}
-                             onClick={(e) => {
-                                 onPageChanged(p)
-                             }}> {p} </span>
+                                key={p}
+                                onClick={(e) => {
+                                    onPageChanged(p)
+                                }}> {p} </NavLink>
             })}
         {portionCount > portionNumber &&
         <button className={styles.btnPaginator} onClick={() => {

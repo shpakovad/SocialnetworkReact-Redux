@@ -4,7 +4,7 @@ import {Field, reduxForm} from "redux-form";
 import {Textarea} from "../../../common/FormsControls/FormControls";
 import s from '../Dialogs.module.css'
 
-const maxLength100 = maxLengthCreator(100)
+const maxLength100 = maxLengthCreator(100);
 
 const AddMessageForm = (props) => {
     return (

@@ -12,16 +12,9 @@ const MyPosts = React.memo(props => {
         return <Post key={item.id} message={item.message} likesCount={item.likesCount}/>
     });
 
-    let newPostElement = React.createRef();
-
     let onAddPost = (values) => {
         props.addPost(values.newPostText)
     };
-
-    // let onPostChange = () => {
-    //     let text = newPostElement.current.value
-    //     props.updateNewPostText(text)
-    // }
 
     return (
 
