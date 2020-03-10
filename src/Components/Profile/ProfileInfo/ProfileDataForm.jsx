@@ -20,7 +20,7 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
         </div>}
 
         <div><b> Full name </b>:
-            {createField('Full name', 'fullName', [], Input)} </div>
+           {createField('Full name', 'fullName', [], Input)}  </div>
         <div><b> Looking for a job </b>:
             {createField('', 'lookingForAJob', [], Input, {type: 'checkbox'})} </div>
 

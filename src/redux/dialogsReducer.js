@@ -2,7 +2,7 @@ const SEND_MESSAGE = "dialogs/SEND-MESSAGE";
 
 let initialState = {
     messages: [
-        {id: 1, message: 'What the fuck??'},
+        {id: 1, message: 'Hello! It is my first message!'},
         {id: 2, message: 'How are you??'},
         {id: 3, message: 'Hello!'},
     ],
