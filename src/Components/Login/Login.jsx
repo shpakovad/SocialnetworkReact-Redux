@@ -11,8 +11,15 @@ import s from './Login.module.css'
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
-        <form onSubmit={handleSubmit}>
+        <div>
 
+
+            <div className={s.wrapperTestsData}> <span> Please, enter  </span>
+                 <span> test email : free@samuraijs.com </span>
+                  <span> test login : free </span>
+                    </div>
+
+        <form onSubmit={handleSubmit}>
             {createField('Email', 'email', [required], Input)}
             {createField('Password', 'password', [required], Input, {type: 'password'})}
             <div className={s.rememberMe}>
@@ -28,6 +35,8 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                 <button className={s.loginButtonRegistration}>Login</button>
             </div>
         </form>
+
+        </div>
     )
 };
 
