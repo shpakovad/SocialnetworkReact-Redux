@@ -30,3 +30,11 @@ form {
     font-weight: bold;
     font-size: 20px;
 }
+.freeAccountData {
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    line-height: 30px;
+    top: 400px;
+    margin-left: 50px;
+}

@@ -13,11 +13,11 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <div>
 
-            {/*<div className={s.wrapperTestsData}><span> Please, enter  </span>*/}
-            {/*    <span> test email : free@samuraijs.com </span>*/}
-            {/*    <span> test login : free </span>*/}
-            {/*</div>*/}
-
+            <div className={s.freeAccountData}>
+                <div> Please enter Free Account</div>
+                <div> email: free@samuraijs.com</div>
+                <div> password: free</div>
+            </div>
             <form onSubmit={handleSubmit}>
                 {createField('Email', 'email', [required], Input)}
                 {createField('Password', 'password', [required], Input, {type: 'password'})}
